@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { KeyRound, Phone, Mail, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { SITE } from '@/data/site';
 import { ARRONDISSEMENTS, COMMUNES } from '@/data/lieux';
 
@@ -9,12 +10,16 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="grid size-9 place-items-center rounded-full bg-gradient-to-br from-brass-2 to-brass text-night">
-                <KeyRound size={18} />
-              </span>
-              <span className="font-display text-2xl font-extrabold lowercase">abao<span className="text-flame">.fr</span></span>
-            </div>
+            {/* logo 3D — cliquer ramène au hero */}
+            <Link href="/#hero" aria-label="Retour en haut — abao.fr" className="group inline-block">
+              <Image
+                src="/images/logo-footer.webp"
+                alt="abao.fr — serrurier vitrier"
+                width={220}
+                height={112}
+                className="h-auto w-48 transition-transform duration-500 group-hover:scale-105 lg:w-56"
+              />
+            </Link>
             <p className="mt-4 max-w-xs text-sm text-muted">
               Entreprise familiale de serrurerie et vitrerie. Toutes les interventions sur un seul numéro,
               celui de {SITE.nicolas}.
