@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sources médias brutes (sauvegarde locale, trop lourdes pour le dépôt)
+/media-src
