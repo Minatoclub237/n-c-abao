@@ -13,11 +13,11 @@ export default function Footer() {
             {/* logo 3D — cliquer ramène au hero */}
             <Link href="/#hero" aria-label="Retour en haut — abao.fr" className="group inline-block">
               <Image
-                src="/images/logo-footer.webp"
+                src="/images/logo-footer.png"
                 alt="abao.fr — serrurier vitrier"
-                width={220}
-                height={112}
-                className="h-auto w-48 rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105 lg:w-56"
+                width={640}
+                height={326}
+                className="h-auto max-w-full transition-transform duration-500 group-hover:scale-105"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted">
