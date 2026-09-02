@@ -100,8 +100,8 @@ export default function Hero() {
               jour et nuit, en moins de 30 minutes.
             </p>
             <Magnetic>
-              <a href={SITE.phoneHref} className="pulse-ring hidden items-center gap-3 rounded-full bg-flame px-7 py-4 font-bold text-white md:inline-flex">
-                <Phone size={18} /> <span className="font-mono-tech">{SITE.phone}</span>
+              <a href={SITE.phoneHref} className="pulse-ring hidden items-center gap-3 rounded-full bg-flame px-7 py-4 font-bold uppercase tracking-wide text-white md:inline-flex">
+                <Phone size={18} /> Devis gratuit
               </a>
             </Magnetic>
           </div>

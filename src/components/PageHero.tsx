@@ -89,8 +89,8 @@ export default function PageHero({
           {intro && <p className="mt-5 max-w-xl text-ivory/85">{intro}</p>}
           <div className="mt-8 flex flex-wrap items-center gap-5">
             <Magnetic>
-              <a href={SITE.phoneHref} className="pulse-ring inline-flex items-center gap-3 rounded-full bg-flame px-7 py-4 font-bold text-white hover:bg-flame-2">
-                <Phone size={18} /> <span className="font-mono-tech">{SITE.phone}</span>
+              <a href={SITE.phoneHref} className="pulse-ring inline-flex items-center gap-3 rounded-full bg-flame px-7 py-4 font-bold uppercase tracking-wide text-white hover:bg-flame-2">
+                <Phone size={18} /> Devis gratuit
               </a>
             </Magnetic>
             <p className="font-serif-it text-lg text-ivory/75">{SITE.hours} — devis gratuit</p>

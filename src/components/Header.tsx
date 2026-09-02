@@ -67,10 +67,10 @@ export default function Header() {
             <Magnetic className="hidden md:block">
               <a
                 href={SITE.phoneHref}
-                className="pulse-ring flex items-center gap-2.5 rounded-full bg-flame px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-flame-2"
+                className="pulse-ring flex items-center gap-2.5 rounded-full bg-flame px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-flame-2"
               >
                 <Phone size={15} className="animate-pulse" />
-                <span className="font-mono-tech">{SITE.phone}</span>
+                Devis gratuit
               </a>
             </Magnetic>
             <button

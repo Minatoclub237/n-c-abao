@@ -73,17 +73,16 @@ export function SectionHead({ kicker, num }: { kicker: string; num: string }) {
   );
 }
 
-export function CallCta({ label = 'Appeler maintenant', sub }: { label?: string; sub?: string }) {
+export function CallCta({ label = 'Devis gratuit', sub }: { label?: string; sub?: string }) {
   return (
     <div className="flex flex-wrap items-center gap-5">
       <Magnetic>
         <a
           href={SITE.phoneHref}
-          className="pulse-ring group inline-flex items-center gap-3 rounded-full bg-flame px-8 py-4 font-bold text-white transition-all hover:bg-flame-2"
+          className="pulse-ring group inline-flex items-center gap-3 rounded-full bg-flame px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:bg-flame-2"
         >
           <Phone size={18} className="transition-transform group-hover:rotate-12" />
           <span>{label}</span>
-          <span className="font-mono-tech text-sm opacity-90">{SITE.phone}</span>
         </a>
       </Magnetic>
       {sub && <p className="font-serif-it text-lg text-ivory/60">{sub}</p>}

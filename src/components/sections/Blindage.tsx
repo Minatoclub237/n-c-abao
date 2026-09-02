@@ -26,13 +26,22 @@ export default function Blindage() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const ctx = gsap.context(() => {
       // assemblage d'armure : les 4 pièces arrivent éclatées dans la profondeur
-      // (4 directions différentes + rotation) et convergent au fil du scroll
-      const DEPART = [
-        { x: -190, y: -140, rotateY: -32, rotateZ: -7, z: -320 },
-        { x: 210, y: -110, rotateY: 28, rotateZ: 6, z: -380 },
-        { x: -170, y: 160, rotateY: 26, rotateZ: 6, z: -300 },
-        { x: 190, y: 140, rotateY: -30, rotateZ: -8, z: -360 },
-      ];
+      // (4 directions différentes + rotation) et convergent au fil du scroll.
+      // Mobile : déports réduits, sinon les pièces survolent le texte empilé.
+      const mobile = window.matchMedia('(max-width: 767px)').matches;
+      const DEPART = mobile
+        ? [
+            { x: -30, y: 60, rotateY: -14, rotateZ: -2, z: -80 },
+            { x: 30, y: 60, rotateY: 12, rotateZ: 2, z: -90 },
+            { x: -30, y: 60, rotateY: 12, rotateZ: 2, z: -80 },
+            { x: 30, y: 60, rotateY: -14, rotateZ: -2, z: -90 },
+          ]
+        : [
+            { x: -190, y: -140, rotateY: -32, rotateZ: -7, z: -320 },
+            { x: 210, y: -110, rotateY: 28, rotateZ: 6, z: -380 },
+            { x: -170, y: 160, rotateY: 26, rotateZ: 6, z: -300 },
+            { x: 190, y: 140, rotateY: -30, rotateZ: -8, z: -360 },
+          ];
       gsap.utils.toArray<HTMLElement>('.armure-piece').forEach((el, i) => {
         gsap.fromTo(el, { ...DEPART[i], opacity: 0.15 }, {
           x: 0, y: 0, z: 0, rotateY: 0, rotateZ: 0, opacity: 1, ease: 'none',

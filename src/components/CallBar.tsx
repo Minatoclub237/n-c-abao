@@ -22,7 +22,7 @@ export default function CallBar() {
         href={SITE.phoneHref}
         className="flex flex-1 items-center justify-center gap-2 rounded-full bg-flame py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_rgba(240,120,24,0.4)]"
       >
-        <Phone size={16} /> <span className="font-mono-tech">{SITE.phone}</span>
+        <Phone size={16} /> <span className="uppercase tracking-wide">Devis gratuit</span>
       </a>
       <a
         href={`https://wa.me/33660094976?text=${encodeURIComponent('Bonjour, j’ai besoin d’une intervention.')}`}

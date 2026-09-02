@@ -105,8 +105,8 @@ export default function ContactForm() {
             <p className="kicker text-flame">C’est urgent ?</p>
             <p className="mt-3 font-serif-it text-xl text-ivory/85">Porte claquée, vitre brisée, rideau bloqué —</p>
             <p className="mt-1 text-sm text-ivory/60">n’attendez pas le formulaire, appelez directement :</p>
-            <a href={SITE.phoneHref} className="pulse-ring mt-5 inline-flex items-center gap-3 rounded-full bg-flame px-7 py-4 font-bold text-white hover:bg-flame-2">
-              <Phone size={17} /> <span className="font-mono-tech">{SITE.phone}</span>
+            <a href={SITE.phoneHref} className="pulse-ring mt-5 inline-flex items-center gap-3 rounded-full bg-flame px-7 py-4 font-bold uppercase tracking-wide text-white hover:bg-flame-2">
+              <Phone size={17} /> Devis gratuit
             </a>
             <p className="mt-3 flex items-center gap-2 text-[0.78rem] text-ivory/50">
               <Clock size={13} /> {SITE.hours} — arrivée en {SITE.delai}
