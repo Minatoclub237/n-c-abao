@@ -17,7 +17,7 @@ export default function Footer() {
                 alt="abao.fr — serrurier vitrier"
                 width={220}
                 height={112}
-                className="h-auto w-48 transition-transform duration-500 group-hover:scale-105 lg:w-56"
+                className="h-auto w-48 rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105 lg:w-56"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted">
